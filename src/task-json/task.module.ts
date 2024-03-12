@@ -4,7 +4,7 @@ import { TaskControllerJSON } from './task.controller';
 import { TaskLoggerMiddleware } from 'src/task/task.logger.middleware';
 
 
-@Module({
+/* @Module({
   controllers: [TaskControllerJSON],
   providers: [TaskServiceJSON],
 })
@@ -12,10 +12,13 @@ export class TaskModuleJSON {
   configure(consumer: MiddlewareConsumer) {
   consumer.apply(TaskLoggerMiddleware).forRoutes(TaskControllerJSON);
   }
-}
+} */
 
 
-/*@Module({})
+@Module({
+  controllers: [TaskControllerJSON],
+  providers: [TaskServiceJSON],
+})
 export class TaskModuleJSON {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(TaskLoggerMiddleware).forRoutes(TaskControllerJSON);
@@ -36,5 +39,5 @@ export class TaskModuleJSON {
       exports: [TaskServiceJSON],
     };
   }
-}*/
+}
 

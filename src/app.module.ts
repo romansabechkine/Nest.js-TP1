@@ -5,7 +5,7 @@ import { TaskModule } from './task/task.module';
 import { TaskModuleJSON } from './task-json/task.module';
 
 @Module({
-  imports: [TaskModule, TaskModuleJSON],
+  imports: [TaskModule, TaskModuleJSON.register()],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -7,19 +7,17 @@ import { TaskService } from 'src/task/task.service';
 @Injectable()
 export class TaskServiceJSON extends TaskService {
 
-  /* protected taskJsonPath
+  protected taskJsonPath
 
   constructor(private options: Record<string, string>) {
     super();
     this.taskJsonPath = options.path
     //this.taskJsonPat = taskJsonPat
     console.log(this.taskJsonPath);
-  } */
+  } 
   
-  /* getValue(key: string): string {
-    return this.options[key]
-  } */
-  private readonly taskJsonPath = 'src/task-json/tasks.json';
+
+  //private readonly taskJsonPath = 'src/task-json/tasks.json';
 
   //private readonly taskJsonPath = 'src/task-json/tasks.json';
   
